@@ -1,0 +1,4 @@
+BACKUP DATABASE [Libary_DB] TO  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\LibaryDB.bak' 
+WITH  RETAINDAYS = 999, NOFORMAT, NOINIT,  NAME = N'Libary_DB-Full Database Backup', 
+SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO

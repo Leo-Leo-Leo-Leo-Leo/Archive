@@ -1,0 +1,66 @@
+﻿@model Pizzatorium.Models.tblUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPerson.dName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPerson.dName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPizza.dIngredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPizza.dIngredients)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSuburb.dSuburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSuburb.dSuburb)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dUserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

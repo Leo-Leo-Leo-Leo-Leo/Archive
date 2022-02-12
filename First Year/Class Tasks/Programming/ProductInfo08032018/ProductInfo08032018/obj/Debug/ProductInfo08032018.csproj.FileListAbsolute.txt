@@ -1,0 +1,7 @@
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\bin\Debug\ProductInfo08032018.exe.config
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\bin\Debug\ProductInfo08032018.exe
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\bin\Debug\ProductInfo08032018.pdb
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\obj\Debug\ProductInfo08032018.csprojResolveAssemblyReference.cache
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\obj\Debug\ProductInfo08032018.csproj.CoreCompileInputs.cache
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\obj\Debug\ProductInfo08032018.exe
+C:\Users\Leardo Taylor\source\repos\ProductInfo08032018\ProductInfo08032018\obj\Debug\ProductInfo08032018.pdb

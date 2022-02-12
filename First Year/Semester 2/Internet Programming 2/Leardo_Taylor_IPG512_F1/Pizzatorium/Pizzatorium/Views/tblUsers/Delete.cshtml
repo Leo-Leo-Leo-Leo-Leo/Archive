@@ -1,0 +1,72 @@
+﻿@model Pizzatorium.Models.tblUser
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPerson.dName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPerson.dName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPizza.dIngredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPizza.dIngredients)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSuburb.dSuburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSuburb.dSuburb)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

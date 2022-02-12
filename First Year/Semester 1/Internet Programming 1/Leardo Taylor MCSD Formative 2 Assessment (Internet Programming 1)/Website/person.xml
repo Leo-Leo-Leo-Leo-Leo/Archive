@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<person>
+<user>
+		<username>Trump</username>
+		<password>1234</password>
+		<name>Donald</name>
+		<surname>Trump</surname>
+		<imgpath>Profiles/About/Pics/profile1.jpg</imgpath>
+		<age>72</age>
+		<degree>MCSD</degree>
+		<email>orange@gmail.com</email>
+		<history>Profiles/About/History/profile1.txt</history>
+    <additional>Profiles/About/Additional/profile1.txt</additional>
+    <gallery>Profiles/Gallery/profile1.html</gallery> 
+    <social>Profiles/Social/profile1.html</social> 
+</user>
+	
+	<user>
+		<username>Rasputin</username>
+		<password>2345</password>
+		<name>Rasputin</name>
+		<surname>Grigori</surname>
+		<imgpath>Profiles/About/Pics/profile2.jpg</imgpath>
+		<age>47</age>
+		<degree>MCSD</degree>
+		<email>holyman@gmail.com</email>
+		<history>Profiles/About/History/profile2.txt</history>
+    	<additional>Profiles/About/Additional/profile2.txt</additional>
+	    <gallery>Profiles/Gallery/profile2.html</gallery> 
+    	<social>Profiles/Social/profile2.html</social> 
+	</user>
+	
+	<user>
+		<username>Adolf</username>
+		<password>3456</password>
+		<name>Adolf</name>
+		<surname>Hitler</surname>
+		<imgpath>Profiles/About/Pics/profile3.jpg</imgpath>
+		<age>45</age>
+		<degree>MCSD</degree>
+		<email>glassofjuice@gmail.com</email>
+		<history>Profiles/About/History/profile3.txt</history>
+    	<additional>Profiles/About/Additional/profile3.txt</additional>
+	    <gallery>Profiles/Gallery/profile3.html</gallery> 
+    	<social>Profiles/Social/profile3.html</social> 
+	</user>
+	
+	<user>
+		<username>Stalin</username>
+		<password>4567</password>
+		<name>Joseph</name>
+		<surname>Stalin</surname>
+		<imgpath>Profiles/About/Pics/profile4.jpg</imgpath>
+		<age>27</age>
+		<degree>MCSD</degree>
+		<email>stalingrad@gmail.com</email>
+		<history>Profiles/About/History/profile4.txt</history>
+    	<additional>Profiles/About/Additional/profile4.txt</additional>
+		<gallery>Profiles/Gallery/profile4.html</gallery> 
+    	<social>Profiles/Social/profile4.html</social> 
+	</user>
+	
+	<user>
+		<username>Erwin</username>
+		<password>5678</password>
+		<name>Erwin</name>
+		<surname>Rommel</surname>
+		<imgpath>Profiles/About/Pics/profile5.jpg</imgpath>
+		<age>40</age>
+		<degree>MCSD</degree>
+		<email>gewehr41@gmail.com</email>
+		<history>Profiles/About/History/profile5.txt</history>
+    	<additional>Profiles/About/Additional/profile5.txt</additional>
+		<gallery>Profiles/Gallery/profile5.html</gallery> 
+    	<social>Profiles/Social/profile5.html</social> 
+	</user>
+</person>

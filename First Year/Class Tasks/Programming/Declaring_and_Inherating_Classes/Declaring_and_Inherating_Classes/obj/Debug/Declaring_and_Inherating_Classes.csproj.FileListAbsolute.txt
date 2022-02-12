@@ -1,0 +1,7 @@
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\bin\Debug\Declaring_and_Inherating_Classes.exe.config
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\bin\Debug\Declaring_and_Inherating_Classes.exe
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\bin\Debug\Declaring_and_Inherating_Classes.pdb
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\obj\Debug\Declaring_and_Inherating_Classes.csprojResolveAssemblyReference.cache
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\obj\Debug\Declaring_and_Inherating_Classes.csproj.CoreCompileInputs.cache
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\obj\Debug\Declaring_and_Inherating_Classes.exe
+C:\Users\Leardo Taylor\source\repos\Declaring_and_Inherating_Classes\Declaring_and_Inherating_Classes\obj\Debug\Declaring_and_Inherating_Classes.pdb

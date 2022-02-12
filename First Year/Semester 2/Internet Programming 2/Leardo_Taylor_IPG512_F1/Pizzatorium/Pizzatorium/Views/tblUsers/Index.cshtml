@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Pizzatorium.Models.tblUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPerson.dName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPizza.dIngredients)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSuburb.dSuburb)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPerson.dName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPizza.dIngredients)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSuburb.dSuburb)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.dUserID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.dUserID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.dUserID })
+        </td>
+    </tr>
+}
+
+</table>

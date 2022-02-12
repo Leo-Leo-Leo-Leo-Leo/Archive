@@ -1,0 +1,42 @@
+﻿@model Pizzatorium.Models.tblDelivery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblDelivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dPhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPerson.dName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPerson.dName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSuburb.dSuburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSuburb.dSuburb)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dDeliveryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,6 @@
+F-Fly
+W- move Forward
+A- move Left
+S - move Backwards
+D - Mover Right
+SHIFT- Accelerate movement

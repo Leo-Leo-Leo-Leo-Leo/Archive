@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PizzatoriumModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblCity">
+    <Key>
+      <PropertyRef Name="dCityID" />
+    </Key>
+    <Property Name="dCityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dCityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblSuburbs" Relationship="Self.FK_tblSuburb_tblCity" FromRole="tblCity" ToRole="tblSuburb" />
+  </EntityType>
+  <EntityType Name="tblDelivery">
+    <Key>
+      <PropertyRef Name="dDeliveryID" />
+    </Key>
+    <Property Name="dDeliveryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dSuburbID" Type="Int32" Nullable="false" />
+    <Property Name="dPersonID" Type="Int32" Nullable="false" />
+    <Property Name="dPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblPerson" Relationship="Self.FK_tblDelivery_tblPerson" FromRole="tblDelivery" ToRole="tblPerson" />
+    <NavigationProperty Name="tblSuburb" Relationship="Self.FK_tblDelivery_tblSuburb" FromRole="tblDelivery" ToRole="tblSuburb" />
+  </EntityType>
+  <EntityType Name="tblIngredient">
+    <Key>
+      <PropertyRef Name="dIngredientID" />
+    </Key>
+    <Property Name="dIngredientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dIngredient" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="dCost" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tblPerson">
+    <Key>
+      <PropertyRef Name="dPersonID" />
+    </Key>
+    <Property Name="dPersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblDeliveries" Relationship="Self.FK_tblDelivery_tblPerson" FromRole="tblPerson" ToRole="tblDelivery" />
+    <NavigationProperty Name="tblUsers" Relationship="Self.FK_tblUsers_tblPerson" FromRole="tblPerson" ToRole="tblUsers" />
+  </EntityType>
+  <EntityType Name="tblPizza">
+    <Key>
+      <PropertyRef Name="dPizzaID" />
+    </Key>
+    <Property Name="dPizzaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dSizeID" Type="Int32" Nullable="false" />
+    <Property Name="dIngredients" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dPizzaName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblSize" Relationship="Self.FK_tblPizza_tbl_Size" FromRole="tblPizza" ToRole="tblSize" />
+    <NavigationProperty Name="tblUsers" Relationship="Self.FK_tblUsers_tblPizza" FromRole="tblPizza" ToRole="tblUsers" />
+  </EntityType>
+  <EntityType Name="tblSize">
+    <Key>
+      <PropertyRef Name="dSizeID" />
+    </Key>
+    <Property Name="dSizeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dSize" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="tblPizzas" Relationship="Self.FK_tblPizza_tbl_Size" FromRole="tblSize" ToRole="tblPizza" />
+  </EntityType>
+  <EntityType Name="tblSuburb">
+    <Key>
+      <PropertyRef Name="dSuburbID" />
+    </Key>
+    <Property Name="dSuburbID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dCityID" Type="Int32" Nullable="false" />
+    <Property Name="dSuburb" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblCity" Relationship="Self.FK_tblSuburb_tblCity" FromRole="tblSuburb" ToRole="tblCity" />
+    <NavigationProperty Name="tblDeliveries" Relationship="Self.FK_tblDelivery_tblSuburb" FromRole="tblSuburb" ToRole="tblDelivery" />
+    <NavigationProperty Name="tblUsers" Relationship="Self.FK_tblUsers_tblSuburb" FromRole="tblSuburb" ToRole="tblUsers" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="dUserID" />
+    </Key>
+    <Property Name="dUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dSuburbID" Type="Int32" Nullable="false" />
+    <Property Name="dPersonID" Type="Int32" Nullable="false" />
+    <Property Name="dPizzaID" Type="Int32" Nullable="false" />
+    <Property Name="dUserName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dPassword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblPerson" Relationship="Self.FK_tblUsers_tblPerson" FromRole="tblUsers" ToRole="tblPerson" />
+    <NavigationProperty Name="tblPizza" Relationship="Self.FK_tblUsers_tblPizza" FromRole="tblUsers" ToRole="tblPizza" />
+    <NavigationProperty Name="tblSuburb" Relationship="Self.FK_tblUsers_tblSuburb" FromRole="tblUsers" ToRole="tblSuburb" />
+  </EntityType>
+  <Association Name="FK_tblSuburb_tblCity">
+    <End Role="tblCity" Type="Self.tblCity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblSuburb" Type="Self.tblSuburb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCity">
+        <PropertyRef Name="dCityID" />
+      </Principal>
+      <Dependent Role="tblSuburb">
+        <PropertyRef Name="dCityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDelivery_tblPerson">
+    <End Role="tblPerson" Type="Self.tblPerson" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblDelivery" Type="Self.tblDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPerson">
+        <PropertyRef Name="dPersonID" />
+      </Principal>
+      <Dependent Role="tblDelivery">
+        <PropertyRef Name="dPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblDelivery_tblSuburb">
+    <End Role="tblSuburb" Type="Self.tblSuburb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblDelivery" Type="Self.tblDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSuburb">
+        <PropertyRef Name="dSuburbID" />
+      </Principal>
+      <Dependent Role="tblDelivery">
+        <PropertyRef Name="dSuburbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUsers_tblPerson">
+    <End Role="tblPerson" Type="Self.tblPerson" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblUsers" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPerson">
+        <PropertyRef Name="dPersonID" />
+      </Principal>
+      <Dependent Role="tblUsers">
+        <PropertyRef Name="dPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPizza_tbl_Size">
+    <End Role="tblSize" Type="Self.tblSize" Multiplicity="1" />
+    <End Role="tblPizza" Type="Self.tblPizza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSize">
+        <PropertyRef Name="dSizeID" />
+      </Principal>
+      <Dependent Role="tblPizza">
+        <PropertyRef Name="dSizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUsers_tblPizza">
+    <End Role="tblPizza" Type="Self.tblPizza" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblUsers" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPizza">
+        <PropertyRef Name="dPizzaID" />
+      </Principal>
+      <Dependent Role="tblUsers">
+        <PropertyRef Name="dPizzaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUsers_tblSuburb">
+    <End Role="tblSuburb" Type="Self.tblSuburb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblUsers" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSuburb">
+        <PropertyRef Name="dSuburbID" />
+      </Principal>
+      <Dependent Role="tblUsers">
+        <PropertyRef Name="dSuburbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PizzatoriumEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tblCities" EntityType="Self.tblCity" />
+    <EntitySet Name="tblDeliveries" EntityType="Self.tblDelivery" />
+    <EntitySet Name="tblIngredients" EntityType="Self.tblIngredient" />
+    <EntitySet Name="tblPersons" EntityType="Self.tblPerson" />
+    <EntitySet Name="tblPizzas" EntityType="Self.tblPizza" />
+    <EntitySet Name="tblSizes" EntityType="Self.tblSize" />
+    <EntitySet Name="tblSuburbs" EntityType="Self.tblSuburb" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <AssociationSet Name="FK_tblSuburb_tblCity" Association="Self.FK_tblSuburb_tblCity">
+      <End Role="tblCity" EntitySet="tblCities" />
+      <End Role="tblSuburb" EntitySet="tblSuburbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDelivery_tblPerson" Association="Self.FK_tblDelivery_tblPerson">
+      <End Role="tblPerson" EntitySet="tblPersons" />
+      <End Role="tblDelivery" EntitySet="tblDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblDelivery_tblSuburb" Association="Self.FK_tblDelivery_tblSuburb">
+      <End Role="tblSuburb" EntitySet="tblSuburbs" />
+      <End Role="tblDelivery" EntitySet="tblDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUsers_tblPerson" Association="Self.FK_tblUsers_tblPerson">
+      <End Role="tblPerson" EntitySet="tblPersons" />
+      <End Role="tblUsers" EntitySet="tblUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPizza_tbl_Size" Association="Self.FK_tblPizza_tbl_Size">
+      <End Role="tblSize" EntitySet="tblSizes" />
+      <End Role="tblPizza" EntitySet="tblPizzas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUsers_tblPizza" Association="Self.FK_tblUsers_tblPizza">
+      <End Role="tblPizza" EntitySet="tblPizzas" />
+      <End Role="tblUsers" EntitySet="tblUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUsers_tblSuburb" Association="Self.FK_tblUsers_tblSuburb">
+      <End Role="tblSuburb" EntitySet="tblSuburbs" />
+      <End Role="tblUsers" EntitySet="tblUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

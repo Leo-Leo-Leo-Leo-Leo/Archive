@@ -1,0 +1,48 @@
+﻿@model Pizzatorium.Models.tblDelivery
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblDelivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dPhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPerson.dName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPerson.dName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSuburb.dSuburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSuburb.dSuburb)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

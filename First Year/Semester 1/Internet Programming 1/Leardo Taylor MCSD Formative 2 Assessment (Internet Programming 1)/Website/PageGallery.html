@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="Navigation.js"></script>
+    <script type="text/javascript" src="PageGallery.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <title>Internet-CV</title>
+
+</head>
+	
+<body>
+    <center>
+        <fieldset id="fsOtherPanel">
+            <legend>Select a page:</legend>
+            <button type="button" class="btnPageOption" onclick="PageToHome()">HOME</button>
+            <button type="button" class="btnPageOption" onclick="PageToAbout()">ABOUT</button>
+            <button type="button" class="btnPageOption" onclick="PageToGallery()">GALLERY</button>
+            <button type="button" class="btnPageOption" onclick="PageToSocial()">SOCIAL</button>
+            <button type="button" class="btnPageOption" onclick="PageToContact()">CONTACT</button>
+            <button type="button" class="btnPageOption" onclick="Logout()">LOGOUT</button>
+        </fieldset>
+    </center>
+    <div class="divLayer1">
+        <div class="divLayer2">
+            <h1>GALLERY</h1>
+            <hr />
+            <div id="divGallery">Place holder text</div>
+            <button onclick="topFunction()" id="btnUp" title="Go to top">Back to Top</button> <!-- This is the back to top button -->
+        </div>
+    </div>
+</body>
+</html>

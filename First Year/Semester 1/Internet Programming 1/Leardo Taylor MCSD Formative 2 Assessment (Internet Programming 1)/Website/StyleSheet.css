@@ -1,0 +1,115 @@
+
+#indexBody {
+    background-color: black;
+    background-image: none;
+}
+
+#divLoginBox {
+    border: 10px solid;
+    border-color: black;
+    background-color: lightgrey;
+    padding: 25px;
+    width:95%;
+    height:95%;
+}
+
+#btnLogin {
+    width: 100px;
+}
+
+#fsHomePanel {
+    background-color: lightcyan;
+    width: 90%;
+    position: fixed;
+    bottom: 30px;
+}
+
+#fsOtherPanel {
+    background-color: lightblue;
+    width: 90%;
+    top: 30px;
+}
+
+#btnUp {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: lightblue; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#btnUp:hover {
+     background-color: lightgreen; /* the colour turns yellow when a mouse is over the button*/
+}
+
+.divLayer1 {
+    background-color: lightgray;
+    position:center;
+    text-align:center;
+    padding:30px;
+    display:block;
+    margin: 10px;
+    opacity: 0.8;
+}
+
+.divLayer1 {
+    position: center;
+    text-align: center;
+    display: block;
+    opacity: 1;
+}
+
+.btnHomePageOption {
+    width: 27%;
+    background-color: lightgray;
+    margin: 2px;
+    padding: 24px;
+}
+
+.btnPageOption {
+    width: 15%;
+    background-color: lightgray;
+    margin: 5px;
+    padding: 10px;
+}
+
+.tdAboutPanel {
+    text-align:left;
+    vertical-align:top;
+    width: 47%;
+    height:95%;
+    border: solid;
+    border-width: 2px;
+    padding: 15px;
+    background-color: dimgray;
+}
+
+body {
+    background-image: url("ImageMissing.png");
+    background-color: lightgray;
+    background-attachment: fixed;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+divHistory {
+    overflow: auto;
+}
+
+divAdditional{
+    overflow:auto;
+}
+
+
+
+

@@ -1,0 +1,30 @@
+﻿<Window x:Class="TruText_Ledger.DBView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TruText_Ledger"
+        mc:Ignorable="d"
+        Title="TruText Ledger" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgvTableView" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="324" Margin="135,52,0,0" VerticalAlignment="Top" Width="647" IsEnabled="False"/>
+        <Button x:Name="btnCust" Content="Customers" HorizontalAlignment="Left" Margin="135,5,0,0" VerticalAlignment="Top" Width="104" Height="40" Click="btnCust_Click"/>
+        <Button x:Name="btnOrder" Content="Orders" HorizontalAlignment="Left" Margin="244,5,0,0" VerticalAlignment="Top" Width="104" Height="40" Click="btnOrder_Click"/>
+        <Button x:Name="btnBook" Content="Books" HorizontalAlignment="Left" Margin="352,5,0,0" VerticalAlignment="Top" Width="104" Height="40" Click="btnBook_Click"/>
+        <Button x:Name="btnSupp" Content="Suppliers" HorizontalAlignment="Left" Margin="461,5,0,0" VerticalAlignment="Top" Width="104" Height="40" Click="btnSupp_Click"/>
+        <Button x:Name="btnEmpl" Content="Employees" HorizontalAlignment="Left" Margin="569,5,0,0" VerticalAlignment="Top" Width="104" Height="40" Click="btnEmpl_Click"/>
+        <Button x:Name="btnRole" Content="Roles" HorizontalAlignment="Left" Margin="678,5,0,0" VerticalAlignment="Top" Width="104" Height="40" Click="btnRole_Click"/>
+        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="120" Height="60" Background="#FFEC3A3A" Click="btnLogout_Click"/>
+        <Button x:Name="btnEdit" Content="Edit Database" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,74,0,0" Height="45" Click="btnEdit_Click"/>
+        <Button x:Name="btnFlt1" Content="Most Sold" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="btnFlt1_Click"/>
+        <Button x:Name="btnFlt2" Content="Best Customer" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="btnFlt2_Click"/>
+        <Button x:Name="btnFlt3" Content="Most Sales" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="btnFlt3_Click"/>
+        <Button x:Name="btnFlt4" Content="Most Provided" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="btnFlt4_Click"/>
+        <Button x:Name="btnRfsh" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,124,0,0" Height="45" Click="btnRfsh_Click"/>
+
+    </Grid>
+</Window>

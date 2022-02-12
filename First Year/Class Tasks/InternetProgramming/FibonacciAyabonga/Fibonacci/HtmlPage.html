@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+        document.getElementById("para").innerText = "Started...";
+
+        function FindFibPos() {
+
+            document.getElementById("para").innerText = "Started...";
+            var logNum1 = "Num1: ", logNum2 = "Num2: ", logTemp1 = "Temp1: ";
+
+            var posStart = parseInt(document.getElementById("txtInput").value);
+            var logPos = posStart.toString();
+
+            var num1 = 0;
+            var num2 = 1;
+            var temp1 = 0;
+
+            logNum1 += "|" + num1.toString();
+            logNum2 += "|" + num2.toString();
+            logTemp1 += "|" + temp1.toString();
+
+            for (var i = 1; i <= posStart; i++) {
+
+                temp1 = num2;
+                num2 = num2 + num1;
+                num1 = temp1;
+
+                logNum1 += "|" + num1.toString();
+                logNum2 += "|" + num2.toString();
+                logTemp1 += "|" + temp1.toString();
+            }
+            var ans = num2;
+            var logAns = "Output: " + num2.toString();
+
+            document.getElementById("txtOutput").value = ans.toString();
+            document.getElementById("para").innerHTML += "<br/>" + logPos + "<br/>" + logNum1 + "<br/>" + logNum2 + "<br/>" + logTemp1 + "<br/>" + logAns;
+            CheckNumType(ans);
+        }
+    </script>
+    <script type="text/javascript">
+        function CheckNumType(ans) {
+
+            var logDivs = "Divs: ";
+
+            var numSubject = ans;
+            var SubType = "";
+            var temp2 = 0;
+
+            for (var i = 1; i <= numSubject; i++) {
+                if (numSubject % i == 0) {
+                    temp2 = temp2 + i;
+                    logDivs += "|" + i.toString();
+                }
+            }
+
+            //check1
+            if (numSubject / 1 == numSubject)
+                SubType = "Prime";
+            //check2
+            if (numSubject % 1 == 0 && numSubject % 2 == 0)
+                SubType = "Perfect"; 
+            //check3
+            if (temp2 < numSubject) 
+                SubType += " & Abundant";
+            //check4
+            else
+                SubType += "& Not Abundant";
+
+            document.getElementById("para").innerHTML += "<br/>" + logDivs;
+            document.getElementById("txtType").value = SubType;
+            
+        }
+    </script>
+    <style>
+        table, td{
+            border: 1px solid;
+        }
+        button{
+            width: 100%;
+        }
+        .log{
+            width: 35%;
+        }
+    </style>
+</head >
+    <body>
+        <table>
+            <tr><td>Fib Position</td><td><input type="text" id="txtInput" /></td></tr>
+            <tr><td>Fib Number</td><td><output id="txtOutput"></output></td></tr>
+            <tr><td>What is it?</td><td><output id="txtType"></output></td></tr>
+            <tr><td colspan= 2 > <button type="button" onclick="FindFibPos()">Quick Maths</button></td></tr>
+        </table>
+        <fieldset class="log">
+            <legend>VarLog</legend>
+            <p id="para"></p>
+        </fieldset>
+    </body>
+</html >

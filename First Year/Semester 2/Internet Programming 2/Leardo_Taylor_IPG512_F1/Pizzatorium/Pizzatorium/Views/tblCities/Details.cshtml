@@ -1,0 +1,26 @@
+﻿@model Pizzatorium.Models.tblCity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblCity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dCityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dCityName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dCityID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

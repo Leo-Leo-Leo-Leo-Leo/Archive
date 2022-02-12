@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PizzatoriumModelStoreContainer" CdmEntityContainer="PizzatoriumEntities">
+    <EntitySetMapping Name="tblCities">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblCity">
+        <MappingFragment StoreEntitySet="tblCity">
+          <ScalarProperty Name="dCityID" ColumnName="dCityID" />
+          <ScalarProperty Name="dCityName" ColumnName="dCityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeliveries">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblDelivery">
+        <MappingFragment StoreEntitySet="tblDelivery">
+          <ScalarProperty Name="dDeliveryID" ColumnName="dDeliveryID" />
+          <ScalarProperty Name="dSuburbID" ColumnName="dSuburbID" />
+          <ScalarProperty Name="dPersonID" ColumnName="dPersonID" />
+          <ScalarProperty Name="dPhoto" ColumnName="dPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIngredients">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblIngredient">
+        <MappingFragment StoreEntitySet="tblIngredients">
+          <ScalarProperty Name="dIngredientID" ColumnName="dIngredientID" />
+          <ScalarProperty Name="dIngredient" ColumnName="dIngredient" />
+          <ScalarProperty Name="dCost" ColumnName="dCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPersons">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblPerson">
+        <MappingFragment StoreEntitySet="tblPerson">
+          <ScalarProperty Name="dPersonID" ColumnName="dPersonID" />
+          <ScalarProperty Name="dName" ColumnName="dName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPizzas">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblPizza">
+        <MappingFragment StoreEntitySet="tblPizza">
+          <ScalarProperty Name="dPizzaID" ColumnName="dPizzaID" />
+          <ScalarProperty Name="dSizeID" ColumnName="dSizeID" />
+          <ScalarProperty Name="dIngredoemt" ColumnName="dIngredoemt" />
+          <ScalarProperty Name="dPizzaName" ColumnName="dPizzaName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSizes">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblSize">
+        <MappingFragment StoreEntitySet="tblSize">
+          <ScalarProperty Name="dSizeID" ColumnName="dSizeID" />
+          <ScalarProperty Name="dSize" ColumnName="dSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSuburbs">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblSuburb">
+        <MappingFragment StoreEntitySet="tblSuburb">
+          <ScalarProperty Name="dSuburbID" ColumnName="dSuburbID" />
+          <ScalarProperty Name="dCityID" ColumnName="dCityID" />
+          <ScalarProperty Name="dSuburb" ColumnName="dSuburb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="PizzatoriumModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="dUserID" ColumnName="dUserID" />
+          <ScalarProperty Name="dSuburbID" ColumnName="dSuburbID" />
+          <ScalarProperty Name="dPersonID" ColumnName="dPersonID" />
+          <ScalarProperty Name="dPizzaID" ColumnName="dPizzaID" />
+          <ScalarProperty Name="dUserName" ColumnName="dUserName" />
+          <ScalarProperty Name="dPassword" ColumnName="dPassword" />
+          <ScalarProperty Name="dPhone" ColumnName="dPhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

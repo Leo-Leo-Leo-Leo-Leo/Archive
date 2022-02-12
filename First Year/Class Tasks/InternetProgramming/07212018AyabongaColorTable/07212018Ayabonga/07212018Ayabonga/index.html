@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+
+        function SetColor() {
+            document.getElementById("para").innerHTML = "Text in your colour combination.";
+            var Color1 = document.getElementById("SelColor1").value;
+            var Color2 = document.getElementById("SelColor2").value;
+
+            if (Color1 == Color2) {
+                document.getElementById("para").className = Color1;
+            }
+            else if (Color1 == "Red" && Color2 == "Blue") {
+                document.getElementById("para").className = "Purple";
+            }
+            else if (Color1 == "Red" && Color2 == "Yellow") {
+                document.getElementById("para").className = "Orange";
+            }
+            else if (Color1 == "Blue" && Color2 == "Yellow") {
+                document.getElementById("para").className = "Green";
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        .Blue {
+            color:blue;
+        }
+        .Purple{
+            color:purple;
+        }
+        .Red {
+            color:red;
+        }
+        .Orange{
+            color:orange;
+        }
+        .Yellow {
+            color:yellow;
+        }
+        .Green{
+            color:green;
+        }
+
+        table, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr><td>Color 1</td></tr>
+            <tr><td>
+                <select id="SelColor1">
+                    <option>Blue</option>
+                    <option>Red</option>
+                    <option>Yellow</option>
+                </select>
+            </td></tr>
+            <tr><td>Color 2</td></tr>
+            <tr><td>
+                <select id="SelColor2">
+                    <option>Blue</option>
+                    <option>Red</option>
+                    <option>Yellow</option>
+                </select>
+            </td></tr>
+            <tr><td><input type="button" value="Do It" onclick="SetColor()"/></td></tr>
+        </table>
+    </form>
+    <p id="para"></p>
+</body>
+</html>

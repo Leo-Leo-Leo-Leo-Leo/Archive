@@ -1,0 +1,7 @@
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\bin\Debug\RentalAgency08062018.exe.config
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\bin\Debug\RentalAgency08062018.exe
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\bin\Debug\RentalAgency08062018.pdb
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\obj\Debug\RentalAgency08062018.csprojResolveAssemblyReference.cache
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\obj\Debug\RentalAgency08062018.csproj.CoreCompileInputs.cache
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\obj\Debug\RentalAgency08062018.exe
+C:\Users\Leardo Taylor\Desktop\RentalAgency08062018\RentalAgency08062018\obj\Debug\RentalAgency08062018.pdb

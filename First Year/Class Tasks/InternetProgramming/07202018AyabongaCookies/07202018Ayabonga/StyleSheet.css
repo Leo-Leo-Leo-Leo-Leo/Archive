@@ -1,0 +1,16 @@
+﻿.Layer1{
+    background-color: lightblue;
+    padding:50px;
+    border: 1px solid black;
+}
+
+.Layer2 {
+    background-color: lightcoral;
+    padding: 10px;
+    border: 1px solid double black;
+}
+
+.Interface{
+    width:200px;
+
+}
